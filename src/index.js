@@ -1,5 +1,5 @@
 const express = require("express");
-
+require("dotenv").config()
 // express app
 const app = express();
 
@@ -24,10 +24,5 @@ app.use("/login", loginController);
 app.use("/carts", cartController);
 
 
-
-
-
-
-
 // listen to port 
-app.listen(3010);
+app.listen(process.env.PORT||3010);
